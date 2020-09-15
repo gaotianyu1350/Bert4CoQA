@@ -252,7 +252,7 @@ def read_coqa_examples(input_file, history_len=2, add_QA_tag=False):
         return (start_index, end_index)
 
     """Main stream"""
-    nlp = spacy.load('en', parser=False)
+    nlp = spacy.load('en_core_web_sm', parser=False)
     with open(input_file, "r", encoding='utf-8') as reader:
         input_data = json.load(reader)["data"]
     examples = []
